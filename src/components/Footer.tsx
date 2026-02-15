@@ -92,7 +92,7 @@ const Footer = () => (
   <p className="flex flex-wrap items-center justify-center gap-2 text-secondary-foreground/70">
     Designed & Developed by
     <a
-      href="https://www.sonakshnandan.com"
+      href="https://sonakshnandan.com"
       target="_blank"
       rel="noopener noreferrer"
       className="font-semibold text-gold-light hover:text-gold-light/80 transition-all duration-300 hover:underline"
