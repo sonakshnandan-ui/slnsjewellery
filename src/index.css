@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 96%;
+    --foreground: 0 10% 15%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 0 10% 15%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 0 10% 15%;
+
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 10% 10%;
+
+    --secondary: 0 60% 25%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 40 20% 92%;
+    --muted-foreground: 0 5% 45%;
+
+    --accent: 43 60% 60%;
+    --accent-foreground: 0 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.5rem;
+
+    --gold: 43 74% 49%;
+    --gold-light: 43 70% 70%;
+    --gold-dark: 43 80% 35%;
+    --maroon: 0 60% 25%;
+    --maroon-light: 0 40% 40%;
+    --cream: 40 33% 96%;
+    --cream-dark: 40 20% 90%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 10% 8%;
+    --foreground: 40 30% 92%;
+    --card: 0 10% 12%;
+    --card-foreground: 40 30% 92%;
+    --popover: 0 10% 12%;
+    --popover-foreground: 40 30% 92%;
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 10% 10%;
+    --secondary: 0 60% 25%;
+    --secondary-foreground: 40 30% 96%;
+    --muted: 0 10% 18%;
+    --muted-foreground: 40 15% 60%;
+    --accent: 43 60% 60%;
+    --accent-foreground: 0 10% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 10% 20%;
+    --input: 0 10% 20%;
+    --ring: 43 74% 49%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gold-gradient {
+    background: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 70% 65%), hsl(43 74% 49%));
+  }
+
+  .gold-text-gradient {
+    background: linear-gradient(135deg, hsl(43 80% 45%), hsl(43 70% 65%), hsl(43 80% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .maroon-gradient {
+    background: linear-gradient(135deg, hsl(0 60% 20%), hsl(0 60% 30%));
+  }
+
+  .glass-card {
+    background: hsl(40 30% 98% / 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(43 74% 49% / 0.2);
+  }
+
+  .glass-card-dark {
+    background: hsl(0 10% 10% / 0.7);
+    backdrop-filter: blur(16px);
+    border: 1px solid hsl(43 74% 49% / 0.3);
+  }
+
+  .gold-border {
+    border: 1px solid hsl(43 74% 49% / 0.3);
+  }
+
+  .gold-shadow {
+    box-shadow: 0 10px 40px -10px hsl(43 74% 49% / 0.25);
+  }
+
+  .hover-lift {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px -15px hsl(43 74% 49% / 0.3);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
