@@ -76,9 +76,47 @@ const Footer = () => (
         </div>
       </div>
 
-      <div className="mt-12 pt-6 border-t border-secondary-foreground/10 text-center text-secondary-foreground/50 text-xs">
-        © {new Date().getFullYear()} Sri Laxmi Narsimha Swamy Jewellery Works. All rights reserved.
-      </div>
+      {/* <div className="mt-12 pt-6 border-t border-secondary-foreground/10 text-center text-secondary-foreground/50 text-xs">
+      Sonaksh Nandan : Website Designer : www.sonakshnandan.com
+        
+  
+      </div> */}
+      <div className="flex flex-col items-center gap-2">
+          <p className="text-secondary-foreground/60">
+    
+  </p>
+  <p className="text-secondary-foreground/60">
+    © {new Date().getFullYear()} Sri Laxmi Narsimha Swamy Jewellery Works. All rights reserved.
+  </p>
+
+  <p className="flex flex-wrap items-center justify-center gap-2 text-secondary-foreground/70">
+    Designed & Developed by
+    <a
+      href="https://www.sonakshnandan.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="font-semibold text-gold-light hover:text-gold-light/80 transition-all duration-300 hover:underline"
+    >
+      Sonaksh Nandan
+    </a>
+
+    <span className="text-secondary-foreground/40">|</span>
+
+    <a
+      href="https://wa.me/917601020093?text=Hi%20Sonaksh%20Nandan,%20I%20want%20a%20website%20like%20this."
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-1 text-green-400 hover:text-green-500 transition-all duration-300"
+    >
+      💬 WhatsApp
+    </a>
+  </p>
+
+  <p className="italic text-secondary-foreground/40 text-[11px] tracking-wide">
+    Crafting Digital Luxury Experiences ✨
+  </p>
+</div>
+
     </div>
   </footer>
 );
